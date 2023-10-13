@@ -46,6 +46,20 @@ export const reducerFn = (state: StateInterface, action: ActionInterface) => {
 						: item
 				),
 			};
+		case 'REMOVE_FROM_CART':
+			const productIndex = state.cart.findIndex((item) => {
+				return (
+					item.id === product.id && item.colorSelected === product.colorSelected
+				);
+			});
+
+			const newArr = [...state.cart];
+
+			newArr.splice(productIndex, 1);
+
+			return {
+				cart: [...newArr],
+			};
 		case 'LOAD_FROM_STORAGE':
 			return {
 				cart: [...JSON.parse(localStorage.getItem('cart') || '{}')],

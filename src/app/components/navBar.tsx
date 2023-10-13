@@ -10,8 +10,6 @@ export function NavBar() {
 	const [cartIcon, setCartIcon] = useState(false);
 
 	useEffect(() => {
-		console.log('lol');
-
 		setCartIcon(!cartIcon);
 	}, [state.cart]);
 
