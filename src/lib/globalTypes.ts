@@ -9,10 +9,6 @@ export interface ProductInterface {
 	colorSelected: string;
 }
 
-export interface localStorageInterface {
-	type: string;
-}
-
 export interface ActionInterface {
 	type: string;
 	payload: unknown;

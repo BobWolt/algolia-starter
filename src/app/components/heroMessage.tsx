@@ -30,7 +30,7 @@ export function HeroMessage() {
 					<span className='text-xs'>
 						Get the{' '}
 						<a
-							href='https://www.github.com'
+							href='https://github.com/BobWolt/algolia-starter'
 							target='_blank'
 							className='text-pink-600 underline'
 						>

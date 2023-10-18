@@ -3,7 +3,7 @@ import React from 'react';
 import { useContext } from 'react';
 import Image from 'next/image';
 
-import { ArrowRight, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 import { CartContext } from '../../lib/contexts';
 export default function Cart() {

@@ -7,16 +7,16 @@ import Link from 'next/link';
 import { Plus, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export function HitFullPage(props: {
-	hit: {
-		title: string;
-		description: string;
-		price: string;
-		image_url: string;
-		id: string;
-		properties: Array<{ name: string; value: any }>;
-	};
-}) {
+type Hit = {
+	title: string;
+	description: string;
+	price: string;
+	image_url: string;
+	id: string;
+	properties: Array<{ name: string; value: any }>;
+};
+
+export function HitFullPage(props: { hit: Hit }) {
 	const { state, dispatch } = useContext(CartContext);
 
 	const [productAdded, setProductAdded] = useState(false);
@@ -46,7 +46,7 @@ export function HitFullPage(props: {
 		// Set to false in order to show Add to cart button again
 		setProductAdded(false);
 	};
-
+	``;
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: -50 }}

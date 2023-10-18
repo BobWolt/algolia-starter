@@ -3,15 +3,16 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 
-export function Hit(props: {
-	hit: {
-		title: string;
-		description: string;
-		price: string;
-		image_url: string;
-		id: string;
-	};
-}) {
+type Hit = {
+	title: string;
+	description: string;
+	price: string;
+	image_url: string;
+	id: string;
+	properties: Array<{ name: string; value: any }>;
+};
+
+export function Hit(props: { hit: Hit }) {
 	return (
 		<Link href={'/products' + `?product_id=${props.hit.id}`}>
 			<div className='relative md:w-[500px] w-80 flex flex-col justify-end md:h-96 h-48 overflow-hidden'>
